@@ -1,0 +1,886 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+html,body{
+    width:100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.navbar-back{
+    background-color: #0a0a0a;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    padding: 21px;
+    color: white;
+    top:0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
+}
+.nav-link{
+    color: white;
+    font-size: 16px;
+    &:hover{
+        color: #dc030a;
+        transition:all 0.25s;
+}
+}
+.navbar_logo{
+    height: 53px;
+    width: 105px;
+    margin-left: 57px;
+    cursor: pointer;
+}
+.nav-links{
+    color: white;
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 18px;
+    flex-grow: 1;
+    margin-right: 30px;
+    gap:23px;
+}
+.nav-link-items{
+    color: white;
+    text-decoration: none;
+}
+.nav-link-items:hover{
+    color: red;
+}
+.banner_container {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url(../assets/banner_background_image.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+/* Desktop approach code */
+.banner-content-alignment {
+    margin-left: 450px;
+    gap: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.banner-heading {
+    font-size: 72px;
+    line-height: 75px;
+    text-align: left;
+    font-family: "Oswald", sans-serif;
+    color: #dc030a;
+}
+
+.banner-sub-heading {
+    text-align: left;
+    font-size: 37px;
+    line-height: 45px;
+    color: #ffffff;
+}
+
+.banner-tag-line {
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #e5e5e5;
+}
+
+.banner-btn {
+    text-align: left;
+    background-color: #dc030a;
+    border-radius: 2px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    color: white;
+    height: 37px;
+    width: 120px;
+    border-width: 0px;
+}
+
+.banner-btn:hover {
+    background-color: #8a1911;
+    transition: 0.2s all ease-in;
+}
+
+/* Responsive code for mobile devices with full left alignment */
+@media (max-width: 768px) {
+    .banner_container {
+        justify-content: flex-start; /* Align content to the left */
+        padding-left: 20px; /* Add left padding around the content */
+    }
+
+    .banner-content-alignment {
+        margin-left: 0; /* Remove margin for smaller screens */
+        align-items: flex-start; /* Ensure content is aligned to the left */
+        text-align: left; /* Keep text left-aligned */
+    }
+
+    .banner-heading {
+        font-size: 48px; /* Reduce font size for smaller screens */
+        line-height: 52px;
+    }
+
+    .banner-sub-heading {
+        font-size: 28px; /* Adjust sub-heading font size */
+        line-height: 34px;
+    }
+
+    .banner-tag-line {
+        font-size: 14px; /* Slightly smaller tag line text */
+        color: #e5e5e5;
+    }
+
+    .banner-btn {
+        font-size: 14px; /* Slightly larger button text for easier tapping */
+        width: 120px; /* Allow the button to resize naturally */
+        height: 45px; /* Increase height for better touch targets */
+        margin-top: 15px; /* Add margin on top of the button */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-heading {
+        font-size: 36px; /* Further reduce font size for very small screens */
+        line-height: 40px;
+    }
+
+    .banner-sub-heading {
+        font-size: 24px; /* Adjust sub-heading font size */
+        line-height: 28px;
+    }
+
+    .banner-tag-line {
+        font-size: 12px; /* Smaller tag line text */
+    }
+
+    .banner-btn {
+        font-size: 12px; /* Smaller button text */
+        height: 40px; /* Adjust button height */
+    }
+}
+.about-us-section{
+    background-color: white;
+    text-align: center;
+}
+.about-us-heading{
+    font-family: "Oswald", sans-serif;
+    font-size: 48px;
+    color:#0a0a0a;
+}
+.about-us-content{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    max-width: 50%;
+    color:  rgb(115, 115, 115);
+    margin-bottom: 15px;
+}
+.about-us-content-alignment{
+    justify-content: center;
+    margin-top: 85px;
+}
+.about-us-card-background-text{
+    color: #e6e6e6;
+    height: 72px;
+    z-index: 0;
+    font-size: 72px;
+    font-family: "Oswald", sans-serif;
+    opacity: 0.6;
+}
+.about-us-card-heading{
+    font-size: 22px;
+    color: black;
+    font-family: "Oswald", sans-serif;
+    line-height: normal;
+    z-index: 12;
+    font-weight: bold;
+    margin-top: 2px;
+}
+.about-us-card-content{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    max-width: 355px;
+    margin-top: 8px;
+    color: rgb(115, 115, 115) ;
+}
+.about-us-images-section{
+    margin-top: 80px;
+}
+.about-us-background-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/session-1.jpg');
+    background-size: cover;
+    height: 75vh;
+    width: 57vw;
+    text-align: center;
+    position: relative;
+}
+.about-us-background-image-2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/session-2.jpg');
+    background-size: cover;
+    height: 75vh;
+    width: 55vw;
+    text-align: center;
+    position: relative;
+}
+.about-us-background-image-heading{
+    font-size: 32px;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    z-index: 3;
+}
+.about-us-background-image-content{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #e5e5e5;
+    max-width: 350px;
+}
+.red-card{
+    background-color: red;
+    height: 23px;
+    width: 23px;
+    border-radius: 0px;
+    position: absolute;
+    left: 308px;
+    top: 100px;
+    z-index: 0;
+}
+.about-us-background-image-button{
+    height: 40px;
+    width: 147px;
+    margin-bottom: 20px;
+    font-family: Arial,  sans-serif;
+    background-color: transparent;
+    color: white;
+    border-width: 2px;
+    border-color: white;
+    font-size: 13px;
+    border-radius: 2px;
+}
+.about-us-background-image-button:hover{
+    background-color: #dc030a;
+    border-width: 0px;
+}
+.about-us-background-image-card-alignment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    align-items: center;
+}
+.about-us-content{
+    max-width: 400px;
+}
+.about-us-section {
+    padding: 50px 20px;
+}
+.about-heading {
+    font-weight: bold;
+}
+.red-card-2{
+background-color: red;
+height: 23px;
+width: 23px;
+border-radius: 0px;
+position: absolute;
+left: 344px;
+top: 102px;
+z-index: 0;
+}
+.about-us-background-image-3{
+background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/session-3.jpg');
+background-size: cover;
+height: 75vh;
+width: 57vw;
+text-align: center;
+position: relative;
+}
+.about-us-background-image-4{
+ background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/session-4.jpg');
+ background-size: cover;
+    height: 75vh;
+    width: 55vw;
+    text-align: center;
+    position: relative;
+}
+.red-card-3{
+ background-color: red;
+height: 23px;
+width: 23px;
+border-radius: 0px;
+position: absolute;
+left: 354px;
+top: 101px;
+z-index: 0;
+ }
+ .red-card-4{
+background-color: red;
+height: 23px;
+width: 23px;
+border-radius: 0px;
+position: absolute;
+left: 332px;
+top: 99px;
+z-index: 0;
+ }
+.our-trainees-section{
+    text-align: center;
+}
+.our-trainees-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+ .our-trainees-heading{
+    font-family: "Oswald", sans-serif;
+    font-size: 32px;
+    color: black;
+
+ }
+ .trainee-name{
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    color: black;
+ }
+ .trainee-role{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #737373;
+ }
+ .trainee-image{
+    max-width: 250px;
+    height: 250x;
+ }
+.trainee-social-media-profiles-alignment{
+    display: flex;
+    flex-direction: row;
+}
+.trainee-social-media-profile:hover{
+    cursor: pointer;
+    background-color: #f54025;
+    border-radius: 4px;
+    transition: all 0.3s ease-in;
+}
+.membership-section{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../assets/membership-background-image.jpg);
+    background-size: cover;
+    max-height: max-content;
+    width: 100%;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+}
+
+.membership-card{
+    background-color: rgb(0 0 0 / 60%);
+    transition: 0.3s;
+    max-width: 100%;
+    padding: 15px;
+    margin-top: 60px;
+}
+.membership-card:hover{
+    background-color:  #dc030a;
+}
+/* ul{
+    list-style: none;
+}
+
+ul li:before{
+    content:'✓';
+    color: #dc030a;
+    margin: 6px;
+} */
+.membership-card-heading{
+    font-family: "Oswald", sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.membership-card-content{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    text-align: left;
+    color: white;
+    margin-bottom: 15px;
+}
+.membership-section-heading{
+    font-family: "Oswald", sans-serif;
+    font-size: 32px;
+    color: white;
+    margin-top: 60px;
+}
+.membership-card-button{
+    background-color: #dc030a;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+    height: 38px;
+    width: 120px;
+    border-width: 0px;
+}
+.membership-card-button:hover{
+    background-color: black;
+}
+.membership-card-dollar-symbol{
+    vertical-align: 6px;
+}
+.our-testimonals-section{
+    text-align: center;
+}
+.our-testimonals-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.our-testimonals-image{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+}
+.our-testimonials-heading{
+    font-family: "Oswald", sans-serif;
+    font-size: 32px;
+    color: black;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+.our-testimonals-client-name{
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    
+}
+.our-testimonals-content{
+    font-family: "Poppins", sans-serif;
+    color: #737373;
+    font-size: 16px;
+    max-width: 550px;
+    margin-top: 10px;
+}
+.blogs-section-heading{
+    font-family: "Oswald", sans-serif;
+    font-size: 32px;
+    text-align: center;
+    color: white;
+}
+.blogs-section{
+    background-color: black;
+    background-size: cover;
+    max-width: 100%;
+    max-height: max-content;
+    margin-top: 60px;
+    padding: 45px;
+}
+.blogs-section-images-container{
+    display: flex;
+    flex-direction: column;
+}
+.blog-section-image{
+    height: 180px;
+}
+.blogs-image-content{
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    color: white;
+}
+.blogs-section-button{
+background-color: #dc030a;
+color: white;
+font-size: 14px;
+margin-top: 10px;
+height: 38px;
+width: 120px;
+border-width: 0px;
+text-align: center;
+}
+.blogs-image-content:hover{
+    color: #dc030a;
+    cursor: pointer;
+}
+.established-images-section-background{
+    background-color: white;
+    max-width: 100%;
+    max-height: max-content;
+}
+.logo-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: 180px;
+}
+.blogs-section-button:hover{
+    background-color: #8a1911;
+}
+.established-section-image{
+    width:140px;
+}
+.footer-section{
+    background-color: black;
+    margin-top: 10px;
+    padding: 20px;
+}
+.footer-section-logo{
+    height: 54px;
+    width: 110px;
+}
+.custom-block{
+    display: block;
+}
+.custom-inline{
+    display: inline;
+}
+.footer-section-heading{
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    color: white;
+    margin-top: 30px;
+}
+.footer-section-gallery-images{
+    height: 100px;
+    width: 100px;
+}
+.footer-section-logo-content{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #737373;
+    max-width: 300px;
+    text-align: left;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.footer-section-content{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #737373;
+}
+.footer-section-icons{
+    height: 20px;
+}
+.footer-section-privacy-content{
+font-family: "Poppins", sans-serif;
+font-size: 16px;
+margin-top: 30px;
+color: #737373;
+}
+.footer-section-email{
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #737373;
+    height: 40px;
+    width: 230px;
+    padding-left: 14px;
+    outline: none;
+}
+.footer-section-button{
+    background-color: #dc030a;
+    height: 35px;
+    width: 80px;
+    font-size: 13px;
+    border-width: 0px;
+    border-radius: 2px;
+    display: block;
+    margin-top: 10px;
+    color: white;
+    &:hover{
+        background-color: #8a1911;
+    }
+}
+@media (max-width:1024px) {
+    .footer-section-gallery-images{
+        height: 80px;
+        width: 80px;
+    }
+    .red-card{
+        display: none;
+    }
+    .red-card-2{
+        display: none;
+    }
+    .red-card-3{
+        display: none;
+    }
+    .red-card-4{
+        display: none;
+    }
+    
+}
+@media (min-width:768px) {
+    .blog-section-image{
+        height: 285px;
+    } 
+}
+@media (min-width:1024px) {
+    .blog-section-image{
+        height: 220px;
+    }
+    
+}
+@media (max-width:768px) {
+    .about-us-content-alignment{
+        flex-direction: column;
+        gap:0px;
+    }
+    .our-trainees-heading{
+        font-size: 28px;
+    }
+    .membership-section-heading{
+        font-size: 28px;
+    }
+    .membership-card-heading{
+        font-size: 25px;
+    }
+    .our-testimonals-content{
+       font-size: 14px;
+       margin-top: 10px; 
+    }
+    .our-testimonials-heading{
+        font-size: 28px;
+    }
+    .blogs-section-heading{
+        font-size: 28px;
+    }
+    .about-us-background-image{
+        width: 99vw;
+    }
+    .about-us-background-image-2{
+        width: 99vw;
+    }
+    .about-us-background-image-3{
+        width: 99vw;
+    }
+    .footer-section-heading{
+        font-size: 22px;
+    }
+    .about-us-background-image-4{
+        width: 99vw;
+    }
+    .blogs-image-content{
+        font-size: 18px;
+    }
+    .about-us-content{
+        margin-left: 200px;
+        margin-top: 10px;
+        max-width: 380px;
+    }
+    .about-us-section{
+        text-align: center;
+    }
+    .logo-container img{
+        height: 160px;
+    }
+    .red-card{
+        display: none;
+    }
+    .red-card-2{
+        display: none;
+    }
+    .red-card-3{
+        display: none;
+    }
+    .red-card-4{
+        display: none;
+    }
+    
+
+}
+@media (width<=576px) {
+    .about-us-card-content{
+        max-width: 390px;
+
+    }
+    
+}
+@media (max-width:576px) {
+    .membership-card-content{
+        font-size: 13px;
+    }
+    .about-us-heading{
+        font-size: 40px;
+     }
+    .banner_container{
+        height: 65vh;
+    }
+    .nav-links{
+        font-size: 15px;
+    }
+    .navbar_logo{
+        margin-left: 0px;
+    }
+    .about-us-background-image-heading{
+        font-size: 25px;
+    }
+    .about-us-background-image-content{
+        font-size: 14px;
+    }
+    .about-us-background-image-button{
+        height: 35px;
+        width: 100px;
+        font-size: 11px;
+    }
+    .about-us-card-content{
+        font-size: 14px;
+    }
+    .footer-section-heading{
+        font-size: 21px;
+    }
+    .red-card{
+        display: none;
+    }
+    .red-card-2{
+        display: none;
+    }
+    .red-card-3{
+        display: none;
+    }
+    .red-card-4{
+        display: none;
+    }
+    
+
+    
+}
+@media (max-width:425px) {
+    .about-us-background-image{
+        width: 375px;
+        height: 320px;
+        margin: 0px;
+     }
+     .about-us-heading{
+        font-size: 40px;
+     }
+     .trainee-name{
+        font-size: 21px;
+     }
+     .banner_container{
+        height: 60vh;
+    }
+     .footer-section-heading{
+        font-size: 20px;
+    }
+     .about-us-background-image-2{
+        width: 375px;
+        height: 320px;
+     }
+     .about-us-background-image-3{
+        width: 375px;
+        height: 320px;
+     }
+     .about-us-background-image-4{
+        width: 375px;
+        height: 320px;
+     }
+     .red-card{
+        display: none;
+    }
+    .red-card-2{
+        display: none;
+    }
+    .red-card-3{
+        display: none;
+    }
+    .red-card-4{
+        display: none;
+    }
+    
+}
+@media(max-width:375px){
+    .about-us-content{
+        margin-left: 10px;
+    }
+    .banner_container{
+        height: 60vh;
+    }
+    .about-us-heading{
+        font-size: 40px;
+     }
+    .footer-section-heading{
+        font-size: 20px;
+    }
+    .trainee-name{
+        font-size: 21px;
+     }
+    .red-card{
+        display: none;
+    }
+    .red-card-2{
+        display: none;
+    }
+    .red-card-3{
+        display: none;
+    }
+    .red-card-4{
+        display: none;
+    }
+}
+@media (max-width:320px) {
+     .logo-container img{
+        height: 140px;
+     }
+     .banner_container{
+        height: 60vh;
+    }
+     .footer-section-heading{
+        font-size: 20px;
+    }
+     .about-us-background-image{
+        width: 340px;
+        height: 300px;
+        margin: 0px;
+     }
+     .about-us-background-image-2{
+        width: 340px;
+        height: 300px;
+     }
+     .about-us-background-image-3{
+        width: 340px;
+        height: 300px;
+     }
+     .about-us-background-image-4{
+        width: 340px;
+        height: 300px;
+     }
+     .about-us-heading{
+        font-size: 40px;
+     }
+     .trainee-name{
+        font-size: 21px;
+     }
+     .red-card{
+        display: none;
+    }
+    .red-card-2{
+        display: none;
+    }
+    .red-card-3{
+        display: none;
+    }
+    .red-card-4{
+        display: none;
+    }
+}
